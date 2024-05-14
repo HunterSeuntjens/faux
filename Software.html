@@ -1,0 +1,88 @@
+
+<html><head><title>FauxSoft Signage</title>
+<head>
+<style> body { background-color: #3d3d3d;} #wrapper { background-color: #fff; height: 1080px; width: 1600px;font-family: Arial, Helvetica, sans-serif;} 
+#header{ background-color: #404040; height: 125px; width: 100%;} #logo{ margin: 15px 10px 0px 50px; float:left;} 
+#nav{ float: left; margin: 80px 600px 10px 20px;} 
+th{  font-family: Arial, Helvetica, sans-serif;color:white; font-size: 22px;} 
+h1{ font-family: Arial, Helvetica, sans-serif; color: #3d3d3d; font-size: 28px;}
+h3{ font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: gray; font-size: 16px;}
+#breadcrumb{ float: left; width: 1850px; margin: 10px 0px 10px 60px:}
+#blue{float:left; background-color: #DAE3F3; width: 1580px; height: 900px; margin: 10px 10px 10px 10px;}
+#gray1{float:left; background-color: #3d3d3d;width:150px; height: 800px; margin: 10px 0px 10px 10px;}
+#gray2{height: 778px; background-color: #fff ;border: 17px solid #3d3d3d; margin-left: 380px;}
+#form{ float:left; background-color:  #fff; width: 1200px; height: 700px; margin: 0px 10px 10px 0px;box-shadow: 0px 3px 8px 5px black;}
+.tab{ background-color: #F0F0F0; width: 60px; Height: 50px; margin: 10px 0px 0px 90px; text-align: right; padding: 3px 3px 3px 3px;}
+#box{ background-color: #000; Height: 400px; width: 250px; margin: 10px 0px 0px 50px; border: 17px solid #3d3d3d;}
+#formhead{float: left; background-color:#f2f2f2; Height: 75px; width:1200px; margin-bottom: 50px;}
+#htmllogo{float: left;  width: 60px;}
+#htmltype{ float:left;  width: 300px;} 
+#clear{ margin: 50px 50px 50px 50px; text-align: left;}
+input[type=submit]{background-color: #3BC7FF; Text-align: right;}
+</style>
+<script type="text/javascript">
+function passVariable()
+{
+var a = document.getElementById('URL').value
+localStorage.setItem("myValue", a);
+window.location.href="Display.html";
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div id="header" >
+<div id="logo"><img src="https://i.imgur.com/8KLKFSQ.png" height="100"></div>
+<div id="nav"> <table><tr> <th>Presentations</th><th>&nbsp</th><th>Playlists</th><th>&nbsp</th><th>Schedules</th><th>&nbsp</th><th>Displays</th><th>&nbsp</th><th>Assets</th></tr></table></div>
+
+<div id="breadcrumb"> <h3>  &nbsp My Playlist/  Web Page/  Edit </h3></div>
+<div id="blue"> 
+<div id="gray1">
+<div id="table">
+<div class="tab"><h4>AS</h4></div>
+<div class="tab"><h4>PL</h4></div>
+<div class="tab"><h4>SC</h4></div>
+<div class="tab"><h4>DI</h4></div>
+<div class="tab"><h4>PR</h4></div>
+<div id="box"></div>
+</div></div>
+
+<div id="form">
+<div id="formhead">
+<div id="htmllogo"><img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" height="60">
+</div><div id="htmltype"><h1> &nbsp Web Page Settings</h1> </div>
+</div>
+<div id="clear">
+<label> URL </label></br>
+<input type="url" id="URL" name="enteredURL" size="100" value="https:\\">
+</br></br></br>
+<hr color="gray" > </hr>
+<label for="R">Refresh Interval</label>
+</br>
+
+<select name="R" id="R">
+  <option value="Never">Never</option>
+  <option value="75%">3hr</option>
+  <option value="50%">1hr</option>
+  <option value="25%">15min</option>
+</select>
+</br></br>
+<label for="Zoom">Zoom Level</label>
+</br>
+
+<select name="Zoom" id="Zoom">
+  <option value="100%">100%</option>
+  <option value="75%">75%</option>
+  <option value="50%">50%</option>
+  <option value="25%">25%</option>
+</select>
+</br>
+</br>
+ <input type="submit" value=" Save" onclick="passVariable()" >
+ <input type="reset" value="Cancel">
+</div>
+</div>
+<div id="gray2"></div>
+
+</div>
+</body></html>
