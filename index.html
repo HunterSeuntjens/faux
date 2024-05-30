@@ -55,7 +55,7 @@
       const handleRuleResult = (ruleResult) => {
 		  const ruleId = ruleResult['RULE_ID'];
 		  if(!ruleId){
-			  retun;
+			  return;
 		  }
 		  if([dRuleId, cRuleId].includes(ruleId)){
 			ruleMap[ruleId] = new Date();
@@ -167,11 +167,11 @@
 <body onload="init();">
 	<!-- The below video plays indefenitely if no customer is detected. -->
 <video id="loopback-video" width="100%" height="100%" autoplay muted loop>
-	<source src="./resources/Default_Attract_Loop.mp4" type="video/mp4">
+	<source src="./Default_Attract_Loop.mp4" type="video/mp4">
 </video>
 <!-- Below iamge shows whenever a customer is detected. -->
-<img id="customer-detected" style="display:none" width="100%" height="100%" src="./resources/Come_closer_Horizontal.jpg">
+<img id="customer-detected" style="display:none" width="100%" height="100%" src="./Come_closer_Horizontal.jpg">
 <!-- Below image shows whenever a customer come closer to the RADAR. -->
-<img id="customer-closer" style="display:none" width="100%" height="100%" src="./resources/Adverts_Horizontal-Couple.png">
+<img id="customer-closer" style="display:none" width="100%" height="100%" src="./Adverts_Horizontal-Couple.png">
 </body>
 </html>
